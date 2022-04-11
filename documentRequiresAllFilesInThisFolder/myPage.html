@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--Using HTML5's header, main and nav tags, instead of generic div elements with a class or id.-->
+
+<html lang="en">
+
+	<head>
+		<title>Some Traditional Roguelikes</title>
+		<meta charset="utf-8"/>
+		<!--Link to the css file in the same directory/folder-->
+		<link rel="stylesheet" href="myPage.css">
+	</head>
+	
+	<body> <!--All HTML 5 divs go in body element-->
+		
+		<header> <!--div is generic, header is semantic/has meaning, but browser doesn't do anything special with it unless there's CSS markup for it-->		
+			<h1>Some Traditional Roguelikes (@+</h1>
+		</header>
+		
+		<nav>			
+			<h2>Links to things</h2>
+			<p>
+				<a href="http://roguebasin.com/index.php/Main_Page">Roguelikes encyclopedia</a>				
+			</p>
+			<p>	<!--Didn't use W3C validator, as this is an offline html document, not actually a web page on web server-->
+				<a href="https://www.freeformatter.com/html-validator.html">What I used to check html validity</a>
+			</p>
+			
+			<h2>Look at this space filler</h2>
+			<img src="capy.png" alt="capybaraCriminal"/>
+			
+			<h2 class="interestingColour">Squish your browser window to see responsive design</h2>
+			
+		</nav>		
+		
+		<main>
+			<h1>Some Of Those Traditional Roguelikes:</h1>
+			
+			<h2>Brogue</h2>
+			<ul> <!--unordered (bullet pointed) list and its list items-->
+				<li> <a href="https://sites.google.com/site/broguegame/">Get it here</a> </li>
+				<li>Easy to start playing</li>
+				<li>Intuitive and simple UI</li>
+				<li>No complicated race and class system</li>
+				<li>Character builds determined by what is randomly found in dungeons</li>
+				<li>Very nice ASCII graphics (keyboard symbols)</li>
+			</ul>
+
+			<h2>Stone Soup</h2>
+			<ul>
+				<li> <a href="https://crawl.develz.org/">Play it here</a> </li>
+				<li>Harder to start playing</li>
+				<li>But has a thorough tutorial</li>
+				<li>Has many races, classes and gods to choose</li>
+				<li>Active Reddit and Discord communities</li>
+				<li>Has clan based tournaments</li>
+				<li>Pixel art and ASCII graphics available</li>
+			</ul>
+			
+			<h2>Nethack</h2>
+			<ul>
+				<li> <a href="https://www.nethack.org/">Get it here</a> </li>
+				<li>One of the older roguelikes</li>
+				<li>Cryptic; a lot of the game's systems aren't obvious</li>
+				<li>Requires extreme trial and error or manual/online-guide reading</li>
+				<li>Charming, creative and full of lots of interesting reading</li>
+				<li>Also has clan based tournaments</li>
+			</ul>
+									
+						
+			
+		</main>
+	
+		<div id="exampleGenericDiv"> <!--CSS selector just needs name of .class or #id-->
+			<table>
+				<tr>
+					<th>Hello</th>
+					<th>World</th> <!--Table Header contents made bold, table data cell contents not-->
+				<tr/>
+				<tr>
+					<td> This is one old way </td>
+					<td> to do page layout </td>
+				</tr>
+			</table>
+		</div>
+		
+	<body/>
+	
+</html>

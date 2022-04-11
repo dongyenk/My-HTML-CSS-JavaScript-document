@@ -1,0 +1,95 @@
+/*Presentational markup for header, main and nav elements instead of any elements with a class or id
+Markup for 
+	id: #idName{ ... }
+	class: .className{ ... }
+	
+I will use conditional presentational markup that allows the page to support wide and narrow screens.
+Will try to use % values instead of fixed pixels in places, as this allows the page to adapt
+*/
+
+body{/*Default font for whole document (All content is nested in body element)*/
+	font-family: monospace, sans-serif;
+}
+
+/*Specify default markup here, screen specific after media queries*/
+header{
+	font-family: monospace, sans-serif; /*browser goes to its default font if these not found*/
+	font-size: 120%;
+	text-align: center;	
+	color: white; /*Could have used selector header h1{...}, but only 1 line of text in header*/	
+	
+	border: solid thick purple;
+	
+	background-color: #9966ff; /*can give int or hex rgb code, or just state english name of colour.*/
+	background-image: url("bannerDark.png"); /*Just colour loads if image not in local directory*/
+	
+	width: 100%; 
+	height: auto; /*Height adjusts as text is squished*/
+}
+
+/*The nav element is sidebar, and will float on the left if screen width >= 1200px*/
+nav{
+	width: 100%;
+	height: auto;
+	
+	text-align: center;
+	
+	background-color: #FFCC66;
+	background-image: url("auld.png"); /*I used GIMP to make images smaller*/
+	padding-right: 1%;
+	padding-bottom: 1%; /*so text is never completely at the edge*/
+	
+	border: solid black;
+}
+
+nav img{
+	max-width: 30%;
+	height: auto;
+	
+	padding: 2%;
+	border: solid thick purple;
+}
+
+/*selects these elements that are nested in an element with this #id*/
+#exampleGenericDiv table, #exampleGenericDiv tr, #exampleGenericDiv th, #exampleGenericDiv td{ 		
+	margin-top: 3%;
+	border: solid black;	
+	font-family: 'comic sans', cursive, sans-serif; /*preferred fonts first, websafe font last*/
+	color: purple;		/*quoting for spaces to be ignored as special characters*/
+}
+.interestingColour{
+	color: #990000;
+}
+
+@media only screen and (min-width: 1200px){ /* if (userWindowWidth >= 1200) */	
+	/*make sure elements are to the right of, not under the sidebar*/
+	#exampleGenericDiv, main{
+		margin-left: 28%;
+	}
+	
+	header{		
+		height: 190px; /*% values bit working for this*/		
+		font-size: 170%; /*100% is default*/
+		padding-top: 40px; /*to centre it*/ 
+	}	
+	
+	main{
+		font-size: 130%; /*100% seems to be default*/		
+	}
+	
+	nav{/*make sidebar actually a sidebar*/
+		margin-top: 1%;
+		float: left;
+		
+		font-size: 110%;
+		
+		width: 25%;
+		height: auto;
+	}
+	nav img{
+		max-width: 85%;
+		height: auto%;
+	}
+	
+	
+}
